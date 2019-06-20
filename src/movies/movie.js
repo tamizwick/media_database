@@ -1,8 +1,8 @@
 import React from 'react';
-import logo from '../logo.svg';
-import Person from '../ui-elements/person.js';
-import Ratings from '../ui-elements/ratings.js';
-import UserData from '../ui-elements/user-data.js';
+import Heading from '../components/heading.js';
+import People from '../components/person.js';
+import Ratings from '../components/ratings.js';
+import UserData from '../components/user-data.js';
 
 class Movie extends React.Component {
     render() {
@@ -15,15 +15,13 @@ class Movie extends React.Component {
             saw: true,
             own: false,
             watchList: true
-        }
-        let media = 'movie'
+        };
+        let media = 'movie';
         
         return (
             <div className='movie'>                
-                <img className='cover-art' src={logo} alt='poster'/>
-                <h1>Avengers</h1>
-                <Person mediaRole='Director' name='Joe Russo' />
-                <Person mediaRole='Actor' name='Chris Hemsworth' />
+                <Heading />
+                <People />
                 <Ratings media={media} score={score} />
                 <UserData media={media} data={userData} />
             </div>

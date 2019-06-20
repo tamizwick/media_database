@@ -1,0 +1,5 @@
+@mixin container {
+    border-radius: $border-radius;
+    padding: $container-padding;
+    color: $dark-gray;
+}

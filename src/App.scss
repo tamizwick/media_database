@@ -1,4 +1,5 @@
 @import 'scss/_variables.scss';
+@import 'scss/_mixins.scss';
 
 body {
     background: $dark-gray;
@@ -13,8 +14,45 @@ h1, h2, h3, h4, h5, h6 {
 
 .movie {
     margin: 2em;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 10px;
+    
+    header {
+        display: flex;
+        font-size: 2em;
+        grid-column: 1 / span 12;
+    }
 }
 
 .cover-art {
     width: 100px;
+    margin: 0 2em .5em 2em;
+}
+
+#people {
+    grid-column: 1 / span 6;
+}
+
+.person {
+    display: inline-block;
+    margin-left: 1em;
+}
+
+#ratings {
+    grid-column: 10 / span 3;
+    grid-row: 2 / span 3;
+    background: $yellow;
+    @include container;
+    
+    h2 {
+        color: $red;
+    }
+}
+
+#user-data {
+    grid-column: 1 / span 9;
+    grid-row-start: 3;
+    background: $light-gray;
+    @include container;
 }

@@ -4,7 +4,7 @@ class Ratings extends React.Component {
     render() {
         if (this.props.media === 'movie') {
             return (
-                    <div>
+                    <div id="ratings">
                        <h2>Ratings</h2>
                         <p><b>IMDB:</b> {this.props.score.imdb}</p>
                         <p><b>Rotten Tomatoes:</b> {this.props.score.rt}</p>
