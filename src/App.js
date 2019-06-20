@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import Movie from './movies/movie.js';
 
 function App() {
