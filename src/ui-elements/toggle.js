@@ -15,7 +15,7 @@ class Toggle extends Component {
   render() {
     return (
       <label>
-        <Switch onChange={this.handleChange} checked={this.state.checked} onColor='#0f8b8d' height={20} width={46} />
+        <Switch onChange={this.handleChange} checked={this.state.checked} onColor='#0f8b8d' height={16} width={46} />
       </label>
     );
   }
