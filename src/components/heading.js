@@ -4,7 +4,7 @@ class Heading extends React.Component {
     render() {
         return (
             <header>
-                <h1>Avengers</h1>
+                <h1>{this.props.title}</h1>
             </header>
         );
     }
