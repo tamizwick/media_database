@@ -14,12 +14,12 @@ class Movie extends React.Component {
         this.state = {
             movie: {}
         }
+        
+        this.handleMovieSelection = this.handleMovieSelection.bind(this);
     }
     
-    handleMovieSelection() {
-        let movieId = 10314;
-        
-        fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${tmdbKey}`)
+    handleMovieSelection(id) {
+        fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${tmdbKey}`)
         .then(response => response.json())
         .then(json => this.setState({
             movie: json
@@ -38,7 +38,7 @@ class Movie extends React.Component {
             watchList: true
         };
         let media = 'movie';
-        this.handleMovieSelection();
+        this.handleMovieSelection(this.props.id);
         return (
             <div className='movie'>                
                 <CoverArt poster={this.state.movie.poster_path} alt={this.state.movie.title} />
