@@ -1,6 +1,9 @@
 import React from 'react';
 
 class Heading extends React.Component {
+/* Props passed from Movie:
+    *title (string)
+*/
     render() {
         return (
             <header>

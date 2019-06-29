@@ -9,7 +9,7 @@ class App extends React.Component {
         super(props);
         
         this.state = {
-            tmdbResults: [],
+            tmdbResults: [], //First three results from TMDB search
             movieSelected: false,
             movieId: ''
         }
@@ -18,6 +18,7 @@ class App extends React.Component {
         this.searchResultClicked = this.searchResultClicked.bind(this);
     }
     
+    //Searches TMDB and returns the top 3 results
     handleSearch() {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=${tmdbKey}&query=${document.querySelector('#search-field').value}`)
         .then(response => response.json())
@@ -29,6 +30,7 @@ class App extends React.Component {
         });
     }
     
+    //When a search result is clicked, sets the state to display Movie with ID of selected result
     searchResultClicked(id) {
         this.setState({
             movieSelected: true,
@@ -40,7 +42,7 @@ class App extends React.Component {
         return (
             <div>
                 <Search 
-                handleSearch={this.handleSearch} 
+                handleSearch={this.handleSearch}
                 searchResultClicked={this.searchResultClicked}
                 tmdbResults={this.state.tmdbResults} 
                 />

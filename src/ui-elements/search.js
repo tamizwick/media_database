@@ -1,7 +1,11 @@
 import React from 'react';
 
 class Search extends React.Component {
-    
+/* Props passed from App:
+    *handleSearch (function)
+    *searchResultClicked (function)
+    *tmdbResults (array)
+*/    
     render() {
         let searchResultClicked = this.props.searchResultClicked;
         return (
@@ -9,11 +13,13 @@ class Search extends React.Component {
                 <input type='search' id='search-field'/>
                 <button type='submit' onClick={this.props.handleSearch}>Submit</button>
                 <div id='search-results'>
-                    {this.props.tmdbResults.map(function(x, index) {
+                    {
+                        //Iterate through the tmdbResults array, returning a ResultButton for each item in the array
+                        this.props.tmdbResults.map(function(x, index) {
                         return (
                             <ResultButton 
                             key={x.id} 
-                            object={x} 
+                            object={x}
                             searchResultClicked={searchResultClicked}
                             />
                         );
@@ -25,7 +31,11 @@ class Search extends React.Component {
 }
 
 class ResultButton extends React.Component {
-    
+/* Props passed from Search:
+    *key
+    *object (object) - the search result from TMDB
+    *searchResultClicked (function), originally from App
+*/
     render() {
         let posterSrc = `https://image.tmdb.org/t/p/w300_and_h450_bestv2${this.props.object.poster_path}`;
         return (

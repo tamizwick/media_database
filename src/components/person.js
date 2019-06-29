@@ -1,6 +1,11 @@
 import React from 'react';
 
 class Person extends React.Component {
+/*Props passed from People:
+    *mediaRole (string)
+    *name (string)
+*/
+    
     render() {
         return (
             <p className='person'><b>{this.props.mediaRole}:</b> {this.props.name}</p>

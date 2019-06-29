@@ -8,6 +8,9 @@ import UserData from '../components/user-data.js';
 import tmdbKey from '../movies/tmdb-api.js';
 
 class Movie extends React.Component {
+/* Props passed from App:
+    *id (string)
+*/
     constructor(props) {
         super(props);
         

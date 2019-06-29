@@ -1,6 +1,10 @@
 import React from 'react';
 
 class Ratings extends React.Component {
+/* Props passed from Movie: 
+    *media (string)
+    *score (object)
+*/
     render() {
         if (this.props.media === 'movie') {
             return (

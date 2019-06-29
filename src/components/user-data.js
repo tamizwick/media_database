@@ -2,6 +2,11 @@ import React from 'react';
 import Toggle from '../ui-elements/toggle.js';
 
 class UserData extends React.Component {
+/* Props passed from Movie:
+    *media (string)
+    *data (object)
+*/
+    
     render() {
         if (this.props.media === 'movie') {
             return (
