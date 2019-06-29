@@ -2,14 +2,16 @@ import React, { Component } from "react";
 import Switch from "react-switch";
  
 class Toggle extends Component {
-  constructor() {
-    super();
-    this.state = { checked: false };
+  constructor(props) {
+    super(props);
+    this.state = { checked: this.props.toggledOn};
     this.handleChange = this.handleChange.bind(this);
   }
  
   handleChange(checked) {
-    this.setState({ checked });
+    this.setState({
+        checked
+    });
   }
  
   render() {

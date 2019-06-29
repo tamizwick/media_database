@@ -9,15 +9,15 @@ class UserData extends React.Component {
                         <h2>My Data</h2>
                         <div className='data-container'>
                             <p><b>Saw it: </b></p>
-                            <Toggle />
+                            <Toggle toggledOn={this.props.data.saw} />
                         </div>
                         <div className='data-container'>
                             <p><b>Own it: </b></p>
-                            <Toggle />
+                            <Toggle toggledOn={this.props.data.own} />
                         </div>
                         <div className='data-container'>
                             <p><b>Watch list: </b></p>
-                            <Toggle />
+                            <Toggle toggledOn={this.props.data.watchList} />
                         </div>
                     </div>
             );
