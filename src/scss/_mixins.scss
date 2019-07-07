@@ -3,3 +3,8 @@
     padding: $container-padding;
     color: $dark-gray;
 }
+
+@mixin button {
+    border-radius: $border-radius;
+    cursor: pointer;
+}

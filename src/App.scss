@@ -82,3 +82,40 @@ h1, h2, h3, h4, h5, h6 {
 .search-poster {
     width: 50px;
 }
+
+#search {
+    margin: 2em;
+    
+    & > button {
+        background: $red;
+        color: $white;
+        border: 1px solid $red;
+        padding: .5em;
+        @include button;
+    }
+}
+
+#search-field {
+    margin-right: 1em;
+    width: 25%;
+    padding: .5em;
+}
+
+#search-results {
+    margin-top: 1em;
+    
+    & button {
+        margin-right: 1em;
+        background: $white;
+        width: 250px;
+        display: inline-flex;
+        border: 1px solid $white;
+        font-family: $primary-font;
+        @include button;
+        
+        & span {
+            align-self: center;
+            margin: auto;
+        }
+    }
+}

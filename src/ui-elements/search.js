@@ -41,7 +41,7 @@ class ResultButton extends React.Component {
         return (
             <button onClick={this.props.searchResultClicked.bind(this, this.props.object.id)}>
                 <img src={posterSrc} alt={this.props.object.title} className='search-poster' />
-                {this.props.object.title}
+                <span>{this.props.object.title}</span>
             </button>
         );
     }
